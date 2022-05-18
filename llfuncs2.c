@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+
 
 /**
  * searchNode - searches linked list for string and

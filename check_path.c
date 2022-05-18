@@ -1,8 +1,9 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * checkPath - searches $PATH for directory of command
  * @build: input build
+ * Return: return boolean.
  */
 _Bool checkPath(config *build)
 {

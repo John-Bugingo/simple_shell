@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef _SHELL_
+#define _SHELL_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,6 +11,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <signal.h>
+
 #include <limits.h>
 
 /* ERRORS */

@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * helpFunc - retrieves instruction on how to use builtin
@@ -16,10 +16,8 @@ int helpFunc(config *build)
 		{"setenv", helpSetenv},
 		{"unsetenv", helpUnsetenv},
 		{"help", helpHelp},
-		{NULL, NULL}
-	};
-	register int i = 0, j = 1, argCount = countArgs(build->args);
-	_Bool foundCommand = false;
+		{NULL, NULL}	};
+	register int i = 0, j = 1, argCount = countArgs(build->args), _Bool foundCommand = false;
 
 	if (argCount == 1)
 		return (displayHelpMenu());
@@ -30,19 +28,14 @@ int helpFunc(config *build)
 		{
 			if (_strcmp(build->args[j], help_arr[i].command) == 0)
 			{
-				foundCommand = true;
-				help_arr[i].func(build);
-				break;
+				foundCommand = true, help_arr[i].func(build), break;
 			}
 			i++;
 		}
 		j++;
 	}
 	if (foundCommand == false)
-	{
-		errno = ENOBUILTIN;
-		errorHandler(build);
-	}
+		errno = ENOBUILTIN, errorHandler(build);
 	return (1);
 }
 
