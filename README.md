@@ -1,1 +1,1 @@
-John and Simon Shell
+Simon and John
